@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Square root comparism calculator</h1>
+</div>
+@{
+    if (ViewBag.Result != null){
+        <div>
+            <p>RESULT: @ViewBag.result</p>
+        </div>
+    }
+}
+<div>
+    <form asp-controllers="root"  asp-action="root" method="post">
+          <p>
+              <label for="">First Number:</label><br>
+              <input type="text" name="firstnumber" id="">
+          </p>
+           <p>
+              <label for="">Second Number:</label><br>
+              <input type="text" name="secondnumber" id="">
+          </p>
+           <p>
+             <input type="submit" value="SUBMIT">
+          </p>
+          
+
+    </form>
+</div>
